@@ -10,16 +10,25 @@ public class PlayerMove : MonoBehaviour
     public float max_speed = 5.0f;
     float current_speed = 0.0f;
 
+    //Jump Stuff
+    public float gravity = 1.0f;
+    public float jump_impulse = 5.0f;
+    public float current_impulse = 0.0f;
+    public float current_gravity = 0.0f;
+    public bool can_jump = true;
+
     public bool enable_move = true;
     public bool enable_jump = true;
     public bool enable_action = true;
+
+    float test;
 
     bool using_pc = false;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        test = jump_impulse * Time.deltaTime;
     }
 
     // Update is called once per frame
@@ -61,6 +70,28 @@ public class PlayerMove : MonoBehaviour
 
     void HandleJump()
     {
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button0)) && can_jump)
+        {
+            Debug.Log("Jump");
+            current_gravity = gravity;
+            current_impulse = test;
+            can_jump = false;
+        }
 
+        current_impulse -= current_gravity * Time.deltaTime;
+
+
+        transform.Translate(0.0f, current_impulse, 0.0f);
+
+        if (transform.position.y < 0.0f)
+        {
+            Vector3 position_y_0 = transform.position;
+            position_y_0.y = 0.0f;
+
+            transform.Translate(position_y_0 - transform.position);
+            current_impulse = 0.0f;
+            current_gravity = 0.0f;
+            can_jump = true;
+        }
     }
 }
