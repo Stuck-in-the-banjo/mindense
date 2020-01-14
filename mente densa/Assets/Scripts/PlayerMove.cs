@@ -5,24 +5,22 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     //Movement stuff
+    Rigidbody2D rb;
     public float deceleration = 1.0f;
     public float acceleration = 2.0f;
     public float max_speed = 5.0f;
     float current_speed = 0.0f;
-
-    Rigidbody2D rb;
+    public bool enable_move = true;
 
     //Jump Stuff
+    public bool enable_jump = true;
     public float jump_impulse = 5.0f;
-    float current_impulse;
 
     bool can_jump = true;
 
-
-    public bool enable_move = true;
-    public bool enable_jump = true;
+    //action stuff
     public bool enable_action = true;
-
+    public GameObject rock;
 
     // Start is called before the first frame update
     void Start()
@@ -35,15 +33,14 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-      
-
         if (enable_jump)
         {
             HandleJump();
 
         }
+
+        if (enable_action)
+            ThrowRock();
     }
 
     private void FixedUpdate()
@@ -95,33 +92,21 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-   //private void OnTriggerStay2D(Collider2D collision)
-   //{
-   //    can_jump = true;
-   //    Debug.Log("COLISION tigger");
-   //}
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         can_jump = true;
         Debug.Log("COLISION tigger");
     }
+
+    void ThrowRock()
+    {
+        if(Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button1))
+        {
+            GameObject new_rock = Instantiate(rock, transform.position, Quaternion.identity);
+            new_rock.GetComponent<RockMovement>().AddInitialImpulse(15);
+        }
+
+       
+    }
 }
 
-//public class PlayerMove : MonoBehaviour
-//{
-//    public float speed;
-//
-//    Rigidbody2D rb;
-//
-//    private void Start()
-//    {
-//        rb = GetComponent<Rigidbody2D>();
-//    }
-//
-//    private void FixedUpdate()
-//    {
-//        float axis = Input.GetAxisRaw("Horizontal");
-//        rb.MovePosition(transform.position + transform.TransformDirection(axis, 0, 0) * Time.deltaTime * speed);
-//    }
-//}
