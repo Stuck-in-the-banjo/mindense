@@ -11,6 +11,10 @@ public class Fader : MonoBehaviour
     bool fade = true;
     SpriteRenderer sr;
 
+    public float time_to_load_scene = -1;
+    float load_timer = 0.0f;
+    public int scene_to_load = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +30,22 @@ public class Fader : MonoBehaviour
             {
                 Color tmp = sr.color;
 
-                if(fade)
+                if (!fade)
                     tmp.a = Mathf.Lerp(0.0f, 1.0f, timer);
                 else tmp.a = Mathf.Lerp(1.0f, 0.0f, timer);
 
                 sr.color = tmp;
                 timer += Time.deltaTime / time_to_fade;
+            }
+            else
+            {
+                if(time_to_load_scene > 0.0f)
+                {
+                    if (load_timer < time_to_load_scene)
+                        load_timer += Time.deltaTime;
+                    else LoadScene();
+                }
+                
             }
         }
 
@@ -58,4 +72,8 @@ public class Fader : MonoBehaviour
         fade = fade_type;
     }
 
+    void LoadScene()
+    {
+        SceneManager.LoadScene(scene_to_load);
+    }
 }

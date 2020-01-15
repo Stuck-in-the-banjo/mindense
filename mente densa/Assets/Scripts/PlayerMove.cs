@@ -20,7 +20,9 @@ public class PlayerMove : MonoBehaviour
 
     //action stuff
     public bool enable_action = true;
+    float throw_impulse = 5.0f;
     public GameObject rock;
+    int throwed = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +41,7 @@ public class PlayerMove : MonoBehaviour
 
         }
 
-        if (enable_action)
+        if (enable_action && throwed < 3)
             ThrowRock();
     }
 
@@ -103,7 +105,9 @@ public class PlayerMove : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
             GameObject new_rock = Instantiate(rock, transform.position, Quaternion.identity);
-            new_rock.GetComponent<RockMovement>().AddInitialImpulse(15);
+            new_rock.GetComponent<RockMovement>().AddInitialImpulse(throw_impulse);
+            throw_impulse += 8;
+            throwed++;
         }
 
        
