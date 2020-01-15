@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class RockMovement : MonoBehaviour
 {
     Rigidbody2D rb;
-    public int scene_to_load = 0;
+
 
     // Start is called before the first frame update
     void Awake()
