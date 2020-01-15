@@ -6,6 +6,9 @@ public class Startfader : MonoBehaviour
 {
     public Fader fader_game_object;
 
+    public float fade_time;
+    public float load_time = 2.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +24,7 @@ public class Startfader : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("ENTER");
-        fader_game_object.StartFade(true, 2.0f);
+        fader_game_object.StartFade(false, fade_time, load_time);
     }
 
 
