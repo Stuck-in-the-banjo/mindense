@@ -100,6 +100,10 @@ public class PlayerMove : MonoBehaviour
         Debug.Log("COLISION tigger");
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        can_jump = false;
+    }
     void ThrowRock()
     {
         if(Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button1))
