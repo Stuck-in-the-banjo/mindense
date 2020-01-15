@@ -21,7 +21,7 @@ public class Startfader : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("ENTER");
-        fader_game_object.StartFade(true);
+        fader_game_object.StartFade(true, 2.0f);
     }
 
 

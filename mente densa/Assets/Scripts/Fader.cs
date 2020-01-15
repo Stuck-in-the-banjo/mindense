@@ -7,7 +7,7 @@ public class Fader : MonoBehaviour
 {
     public float time_to_fade = 1.5f; //seconds
     public float timer = 0.0f;
-    bool start = false;
+    public bool start = false;
     bool fade = true;
     SpriteRenderer sr;
 
@@ -26,16 +26,21 @@ public class Fader : MonoBehaviour
     {
         if(start)
         {
+            
+
             if (timer < time_to_fade)
             {
                 Color tmp = sr.color;
 
+                float x = timer / time_to_fade;
+
                 if (!fade)
-                    tmp.a = Mathf.Lerp(0.0f, 1.0f, timer);
-                else tmp.a = Mathf.Lerp(1.0f, 0.0f, timer);
+                    tmp.a = Mathf.Lerp(0.0f, 1.0f, x);
+                else tmp.a = Mathf.Lerp(1.0f, 0.0f, x);
 
                 sr.color = tmp;
-                timer += Time.deltaTime / time_to_fade;
+                timer += Time.deltaTime;
+
             }
             else
             {
@@ -66,10 +71,14 @@ public class Fader : MonoBehaviour
 
     }
 
-    public void StartFade(bool fade_type)
+    public void StartFade(bool fade_type, float new_time_to_load_scene)
     {
         start = true;
         fade = fade_type;
+
+        timer = 0.0f;
+
+        time_to_load_scene = new_time_to_load_scene;
     }
 
     void LoadScene()

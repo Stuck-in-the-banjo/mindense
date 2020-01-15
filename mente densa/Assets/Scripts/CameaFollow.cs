@@ -8,7 +8,7 @@ public class CameaFollow : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (player.transform.position.x > 0.0f)
+        if (player.transform.position.x > 0.0f && player.transform.position.x < 40.0f)
             Follow();
     }
 
