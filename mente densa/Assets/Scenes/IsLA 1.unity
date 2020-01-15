@@ -1746,6 +1746,7 @@ MonoBehaviour:
   timer: 0
   time_to_load_scene: 2
   scene_to_load: 0
+  state: 2
 --- !u!1 &805631123
 GameObject:
   m_ObjectHideFlags: 0
@@ -3521,8 +3522,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1715705931}
   - component: {fileID: 1715705930}
-  - component: {fileID: 1715705932}
   - component: {fileID: 1715705933}
+  - component: {fileID: 1715705932}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -3579,10 +3580,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1715705929}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: febaeb6783f5b3b4ca8d8726dc27824c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f4d68bc2bb7acf42b0882bdca083a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fader_game_object: {fileID: 729059912}
+  sr: {fileID: 729059910}
+  time_load_scene: 2
 --- !u!50 &1715705933
 Rigidbody2D:
   serializedVersion: 4
