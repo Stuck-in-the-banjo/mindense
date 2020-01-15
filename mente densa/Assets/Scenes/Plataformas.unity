@@ -1580,6 +1580,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fader_game_object: {fileID: 2076631790}
+  fade_time: 1.5
+  load_time: 2
 --- !u!1 &952302605
 GameObject:
   m_ObjectHideFlags: 0
@@ -2566,7 +2568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2076631790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2581,9 +2583,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time_to_fade: 0.5
   timer: 0
-  start: 1
   time_to_load_scene: -1
   scene_to_load: 0
+  state: 0
 --- !u!212 &2076631791
 SpriteRenderer:
   m_ObjectHideFlags: 0
