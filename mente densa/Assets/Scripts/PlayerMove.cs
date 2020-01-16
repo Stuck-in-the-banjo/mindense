@@ -27,6 +27,7 @@ public class PlayerMove : MonoBehaviour
     //animator
     Animator anim;
     bool boolaso = false;
+    SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,7 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         anim = GetComponent<Animator>();
-
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -44,7 +45,10 @@ public class PlayerMove : MonoBehaviour
         {
             HandleJump();
 
+           
         }
+
+        HandleJumpAnimations();
 
         if (boolaso)
             anim.SetBool("Throw", false);
@@ -64,10 +68,14 @@ public class PlayerMove : MonoBehaviour
     {       
         float axis = Input.GetAxisRaw("Horizontal");
 
+        HandleRunAnimation(axis);
+
         current_speed += axis * acceleration;
         current_speed = Mathf.Clamp(current_speed, -max_speed, max_speed);
 
         transform.Translate(current_speed * Time.deltaTime, 0.0f, 0.0f);
+
+
 
         //Decelerate
         if (axis == 0.0f)
@@ -126,6 +134,34 @@ public class PlayerMove : MonoBehaviour
         }
 
        
+    }
+
+    void HandleJumpAnimations()
+    {
+        if (rb.velocity.y == 0.0f)
+            anim.SetBool("fallin", false);
+
+        if (rb.velocity.y > 0.0f)
+            anim.SetBool("jumpin", true);
+
+        if (rb.velocity.y < 0.0f)
+        {
+            anim.SetBool("jumpin", false);
+            anim.SetBool("fallin", true);
+        }
+    }
+
+    void HandleRunAnimation(float value)
+    {
+        if (value != 0.0f)
+            anim.SetBool("movin", true);
+        else anim.SetBool("movin", false);
+
+        if (value > 0.0f)
+            sr.flipX = false;
+
+        if (value < 0.0f)
+            sr.flipX = true;
     }
 }
 
