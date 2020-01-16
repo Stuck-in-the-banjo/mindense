@@ -24,11 +24,16 @@ public class PlayerMove : MonoBehaviour
     public GameObject rock;
     int throwed = 0;
 
+    //animator
+    Animator anim;
+    bool boolaso = false;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+
+        anim = GetComponent<Animator>();
 
     }
 
@@ -40,6 +45,9 @@ public class PlayerMove : MonoBehaviour
             HandleJump();
 
         }
+
+        if (boolaso)
+            anim.SetBool("Throw", false);
 
         if (enable_action && throwed < 3)
             ThrowRock();
@@ -112,6 +120,9 @@ public class PlayerMove : MonoBehaviour
             new_rock.GetComponent<RockMovement>().AddInitialImpulse(throw_impulse);
             throw_impulse += 8;
             throwed++;
+
+            boolaso = true;
+            anim.SetBool("Throw", true);
         }
 
        
