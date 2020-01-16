@@ -3882,12 +3882,12 @@ PrefabInstance:
     - target: {fileID: 4817140822336266142, guid: a979c458170a2e645bdf005f23295fca,
         type: 3}
       propertyPath: enable_move
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4817140822336266142, guid: a979c458170a2e645bdf005f23295fca,
         type: 3}
       propertyPath: enable_jump
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a979c458170a2e645bdf005f23295fca, type: 3}

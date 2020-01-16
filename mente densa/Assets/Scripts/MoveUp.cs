@@ -40,6 +40,12 @@ public class MoveUp : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         start_moving = true;
+        collision.gameObject.GetComponent<PlayerMove>().patatero = false;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        collision.gameObject.GetComponent<PlayerMove>().patatero = true;
     }
 
     void Move()

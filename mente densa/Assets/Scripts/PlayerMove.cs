@@ -24,6 +24,8 @@ public class PlayerMove : MonoBehaviour
     public GameObject rock;
     int throwed = 0;
 
+    public bool patatero = true;
+
     //animator
     Animator anim;
     bool boolaso = false;
@@ -110,7 +112,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         can_jump = true;
         Debug.Log("COLISION tigger");
@@ -148,6 +150,12 @@ public class PlayerMove : MonoBehaviour
         {
             anim.SetBool("jumpin", false);
             anim.SetBool("fallin", true);
+        }
+
+        if(!patatero)
+        {
+            anim.SetBool("jumpin", false);
+            anim.SetBool("fallin", false);
         }
     }
 
