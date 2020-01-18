@@ -2151,8 +2151,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821282320}
   m_LocalRotation: {x: -0, y: -0, z: -0.2832817, w: 0.95903677}
-  m_LocalPosition: {x: -0.69, y: -5.23, z: 0}
-  m_LocalScale: {x: 0.16100995, y: 3.60677, z: 1}
+  m_LocalPosition: {x: -0.22, y: -4.56, z: 0}
+  m_LocalScale: {x: 0.16100995, y: 1.5991718, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
@@ -2231,8 +2231,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838394944}
   m_LocalRotation: {x: -0, y: -0, z: -0.2832817, w: 0.95903677}
-  m_LocalPosition: {x: -2.65, y: -5.23, z: 0}
-  m_LocalScale: {x: 0.66178, y: 3.60677, z: 1}
+  m_LocalPosition: {x: -1.86, y: -4.05, z: 0}
+  m_LocalScale: {x: 0.66178, y: 1.4670537, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -3189,7 +3189,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1260533032}
   - component: {fileID: 1260533031}
-  - component: {fileID: 1260533033}
   m_Layer: 0
   m_Name: gradiente
   m_TagString: Untagged
@@ -3260,20 +3259,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -26.503002}
---- !u!114 &1260533033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260533030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd1b26d423e9884c996c462f813735d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  up_desplacement: 2
-  speed: 3
 --- !u!1 &1438313908
 GameObject:
   m_ObjectHideFlags: 0
@@ -4452,8 +4437,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015324133}
   m_LocalRotation: {x: -0, y: -0, z: -0.2832817, w: 0.95903677}
-  m_LocalPosition: {x: -3.85, y: -5.23, z: 0}
-  m_LocalScale: {x: 0.106983356, y: 3.60677, z: 1}
+  m_LocalPosition: {x: -3.4, y: -4.64, z: 0}
+  m_LocalScale: {x: 0.106983356, y: 1.584995, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -4563,7 +4548,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2074456429}
   - component: {fileID: 2074456428}
-  - component: {fileID: 2074456430}
   m_Layer: 0
   m_Name: gradiente (2)
   m_TagString: Untagged
@@ -4634,20 +4618,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -26.503002}
---- !u!114 &2074456430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074456427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd1b26d423e9884c996c462f813735d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  up_desplacement: 2
-  speed: 3
 --- !u!1 &2128210000
 GameObject:
   m_ObjectHideFlags: 0
@@ -4658,7 +4628,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2128210002}
   - component: {fileID: 2128210001}
-  - component: {fileID: 2128210003}
   m_Layer: 0
   m_Name: gradiente (1)
   m_TagString: Untagged
@@ -4729,20 +4698,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -26.503002}
---- !u!114 &2128210003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128210000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd1b26d423e9884c996c462f813735d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  up_desplacement: 2
-  speed: 3
 --- !u!1001 &4817140823266513476
 PrefabInstance:
   m_ObjectHideFlags: 0
