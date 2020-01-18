@@ -2970,6 +2970,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1788963758}
+  speed: 1
+  tmp: {fileID: 1788963760}
+  smooth_speed: 3
 --- !u!1 &1638780356
 GameObject:
   m_ObjectHideFlags: 0
@@ -3040,6 +3043,12 @@ Transform:
 --- !u!1 &1788963758 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4817140822336266131, guid: a979c458170a2e645bdf005f23295fca,
+    type: 3}
+  m_PrefabInstance: {fileID: 162237140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1788963760 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4817140822336266141, guid: a979c458170a2e645bdf005f23295fca,
     type: 3}
   m_PrefabInstance: {fileID: 162237140}
   m_PrefabAsset: {fileID: 0}
