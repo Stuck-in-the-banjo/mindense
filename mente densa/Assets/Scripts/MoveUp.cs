@@ -51,7 +51,7 @@ public class MoveUp : MonoBehaviour
     void Move()
     {
         move.x = transform.position.x;
-        move.y = Mathf.Lerp(transform.position.y, -2.0f, timer);
+        move.y = Mathf.Lerp(transform.position.y, -1.920819f, timer);
 
         rb.MovePosition(move);
     }
@@ -59,7 +59,7 @@ public class MoveUp : MonoBehaviour
     void Draw()
     {
         Color tmp = sr.color;
-        tmp.a = Mathf.Lerp(0.0f, 1.0f, timer * speed);
+        tmp.a = Mathf.Lerp(0.0f, 0.5f, timer * speed);
         sr.color = tmp;
     }
 
