@@ -51,7 +51,7 @@ public class MoveUp : MonoBehaviour
     void Move()
     {
         move.x = transform.position.x;
-        move.y = Mathf.Lerp(transform.position.y, -1.920819f, timer);
+        move.y = Mathf.Lerp(transform.position.y, -1.75f, timer);
 
         rb.MovePosition(move);
     }
