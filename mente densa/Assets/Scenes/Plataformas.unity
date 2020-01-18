@@ -586,7 +586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135307533}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.757618, y: -5.774311, z: 124.31363}
+  m_LocalPosition: {x: 5.76, y: -5.7, z: 124.31363}
   m_LocalScale: {x: 1.6769532, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2068823183}
@@ -694,7 +694,7 @@ PrefabInstance:
     - target: {fileID: 4817140822336266136, guid: a979c458170a2e645bdf005f23295fca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.13
+      value: -2.2508185
       objectReference: {fileID: 0}
     - target: {fileID: 4817140822336266136, guid: a979c458170a2e645bdf005f23295fca,
         type: 3}
@@ -768,6 +768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 196601299}
   - component: {fileID: 196601298}
+  - component: {fileID: 196601300}
   m_Layer: 0
   m_Name: Tubos2 (3)
   m_TagString: Untagged
@@ -838,6 +839,20 @@ Transform:
   m_Father: {fileID: 1638780357}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &196601300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196601297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6801400dfd2674a40a02060fa4a9d847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1529184581}
+  parallaxEffect: 0.1
 --- !u!1 &208930739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1104,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 517406770}
-  - component: {fileID: 517406771}
   m_Layer: 0
   m_Name: Arco Parallax
   m_TagString: Untagged
@@ -1105,27 +1119,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517406769}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.07999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1520894338}
   m_Father: {fileID: 1237765478}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &517406771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517406769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6801400dfd2674a40a02060fa4a9d847, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1529184581}
-  parallaxEffect: 0.08
 --- !u!1 &565143253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,6 +1312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 642557186}
   - component: {fileID: 642557185}
+  - component: {fileID: 642557187}
   m_Layer: 0
   m_Name: Tubos2 (1)
   m_TagString: Untagged
@@ -1382,6 +1383,20 @@ Transform:
   m_Father: {fileID: 1638780357}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &642557187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642557184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6801400dfd2674a40a02060fa4a9d847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1529184581}
+  parallaxEffect: 0.1
 --- !u!1 &693999267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,6 +1407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 693999269}
   - component: {fileID: 693999268}
+  - component: {fileID: 693999270}
   m_Layer: 0
   m_Name: Tubos2 (2)
   m_TagString: Untagged
@@ -1462,6 +1478,20 @@ Transform:
   m_Father: {fileID: 1638780357}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &693999270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693999267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6801400dfd2674a40a02060fa4a9d847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1529184581}
+  parallaxEffect: 0.1
 --- !u!1 &766220432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,6 +1711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 869680196}
   - component: {fileID: 869680195}
+  - component: {fileID: 869680197}
   m_Layer: 0
   m_Name: Tubos1 (1)
   m_TagString: Untagged
@@ -1751,6 +1782,20 @@ Transform:
   m_Father: {fileID: 1638780357}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &869680197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869680194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6801400dfd2674a40a02060fa4a9d847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1529184581}
+  parallaxEffect: 0.1
 --- !u!1 &887572827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,7 +2145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042776827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.486484, y: 0.32081845, z: -102.57422}
+  m_LocalPosition: {x: 12.486484, y: 0.2, z: -102.57422}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2077059783}
@@ -2228,8 +2273,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.58, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1638780357}
   - {fileID: 517406770}
+  - {fileID: 1638780357}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2446,6 +2491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1405734264}
   - component: {fileID: 1405734263}
+  - component: {fileID: 1405734265}
   m_Layer: 0
   m_Name: Tubos2
   m_TagString: Untagged
@@ -2516,6 +2562,20 @@ Transform:
   m_Father: {fileID: 1638780357}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1405734265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405734262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6801400dfd2674a40a02060fa4a9d847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1529184581}
+  parallaxEffect: 0.1
 --- !u!1 &1468705293
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,6 +2788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1520894338}
   - component: {fileID: 1520894337}
+  - component: {fileID: 1520894339}
   m_Layer: 0
   m_Name: Arco2
   m_TagString: Untagged
@@ -2792,12 +2853,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520894336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.29, y: 0.23000002, z: 10}
+  m_LocalPosition: {x: 32.29, y: 0.23, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 517406770}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1520894339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520894336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6801400dfd2674a40a02060fa4a9d847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1529184581}
+  parallaxEffect: 0.08
 --- !u!1 &1529184581
 GameObject:
   m_ObjectHideFlags: 0
@@ -2857,7 +2932,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -2904,7 +2979,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1638780357}
-  - component: {fileID: 1638780358}
   m_Layer: 0
   m_Name: Tubos parallax
   m_TagString: Untagged
@@ -2920,7 +2994,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638780356}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1405734264}
@@ -2930,22 +3004,8 @@ Transform:
   - {fileID: 693999269}
   - {fileID: 196601299}
   m_Father: {fileID: 1237765478}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1638780358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638780356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6801400dfd2674a40a02060fa4a9d847, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1529184581}
-  parallaxEffect: 0.1
 --- !u!1 &1671303561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,7 +3030,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671303561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.486484, y: 0.32081845, z: -102.57422}
+  m_LocalPosition: {x: 12.486484, y: 0.2, z: -102.57422}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2068823183}
@@ -3085,7 +3145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922166993}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.882381, y: -5.774311, z: 124.31363}
+  m_LocalPosition: {x: -11.882381, y: -5.7, z: 124.31363}
   m_LocalScale: {x: 1.6769532, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2068823183}
@@ -3329,8 +3389,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077059780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.81136, y: -5.270818, z: 102.57422}
-  m_LocalScale: {x: 1.175, y: 0.1375, z: 1}
+  m_LocalPosition: {x: 18.1, y: -5.270818, z: 102.57422}
+  m_LocalScale: {x: 1.1750001, y: 0.1375, z: 1}
   m_Children: []
   m_Father: {fileID: 1042776828}
   m_RootOrder: 0
@@ -3379,6 +3439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2098781565}
   - component: {fileID: 2098781564}
+  - component: {fileID: 2098781566}
   m_Layer: 0
   m_Name: Tubos1
   m_TagString: Untagged
@@ -3449,3 +3510,17 @@ Transform:
   m_Father: {fileID: 1638780357}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2098781566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098781563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6801400dfd2674a40a02060fa4a9d847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1529184581}
+  parallaxEffect: 0.1

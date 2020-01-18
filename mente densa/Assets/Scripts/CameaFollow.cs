@@ -14,7 +14,7 @@ public class CameaFollow : MonoBehaviour
 
     void Follow()
     {
-        float distance_to_move = player.transform.position.x - transform.position.x;
+        float distance_to_move = (player.transform.position.x - transform.position.x);
 
         if (Mathf.Abs(distance_to_move) < 0.1f)
             distance_to_move = 0.0f;
