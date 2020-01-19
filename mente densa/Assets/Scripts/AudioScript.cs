@@ -5,18 +5,18 @@ using UnityEngine;
 public class AudioScript : MonoBehaviour
 {
     public GameObject teleport_no_light;
+    public GameObject collider_to_delete;
+    public train Train_gameobject;
+
     Vector3 initial_pos;
 
     float timer = 0.0f;
     float mini_timer = 0.0f;
 
-    public float light_flickering_time_0;
-    public float light_flickering_time_1;
-    public float light_flickering_time_2;
-
     bool lol = true;
     int fliker = 0;
 
+    bool init_pos = false;
 
     int interaction = 0;
     // Start is called before the first frame update
@@ -33,6 +33,12 @@ public class AudioScript : MonoBehaviour
 
         if (interaction == 1)
             DoFlikerin1();
+
+        if (interaction == 2)
+            DoAudios();
+
+        if (interaction == 3)
+            DoTrain();
     }
 
     void DoFlikerin1()
@@ -54,6 +60,8 @@ public class AudioScript : MonoBehaviour
             interaction = 2;
             transform.position = teleport_no_light.transform.position;
             mini_timer = 0.0f;
+
+            
         }
     }
 
@@ -78,6 +86,23 @@ public class AudioScript : MonoBehaviour
             fliker = 0;
             mini_timer = 0.0f;
             lol = true;
+        }
+    }
+
+    void DoAudios()
+    {
+        interaction = 3;
+    }
+
+    void DoTrain()
+    {
+       
+        if (!init_pos)
+        {
+            transform.position = initial_pos;
+            init_pos = true;
+            GameObject.Destroy(collider_to_delete);
+            Train_gameobject.StartMovin();
         }
     }
 }

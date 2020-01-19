@@ -3022,6 +3022,8 @@ MonoBehaviour:
   speed: 1
   tmp: {fileID: 1788963760}
   smooth_speed: 3
+  follow_point: 1
+  un_follow_point: 40
 --- !u!114 &1529184586
 MonoBehaviour:
   m_ObjectHideFlags: 0

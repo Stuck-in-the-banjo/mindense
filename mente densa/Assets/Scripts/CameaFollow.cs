@@ -15,7 +15,7 @@ public class CameaFollow : MonoBehaviour
     public bool follow_y = false;
     public float y_offsset = 0.0f;
 
-    Vector3 new_pos;
+    public Vector3 new_pos;
 
     private void Start()
     {
@@ -31,9 +31,6 @@ public class CameaFollow : MonoBehaviour
             float smooth = Mathf.Lerp(transform.position.x, desired_pos, smooth_speed * Time.deltaTime);
 
             new_pos.x = smooth * speed;
-
-          
-            
 
             transform.position = new_pos;
         }
