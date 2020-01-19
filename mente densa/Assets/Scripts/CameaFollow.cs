@@ -13,6 +13,15 @@ public class CameaFollow : MonoBehaviour
     public float follow_point;
     public float un_follow_point;
     public bool follow_y = false;
+    public float y_offsset = 0.0f;
+
+    Vector3 new_pos;
+
+    private void Start()
+    {
+        new_pos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
+    }
 
     private void FixedUpdate()
     {
@@ -21,12 +30,18 @@ public class CameaFollow : MonoBehaviour
             float desired_pos = player.transform.position.x;
             float smooth = Mathf.Lerp(transform.position.x, desired_pos, smooth_speed * Time.deltaTime);
 
-            Vector3 new_pos = new Vector3(smooth * speed, transform.position.y, transform.position.z);
+            new_pos.x = smooth * speed;
 
-            float smooth_y = Mathf.Lerp(transform.position.y, player.transform.position.y + 2.88f, smooth_speed * Time.deltaTime);
-            if (follow_y)
-                new_pos.y = player.transform.position.y + 2.88f;
+          
+            
 
+            transform.position = new_pos;
+        }
+
+
+        if (follow_y)
+        {
+            new_pos.y = player.transform.position.y + y_offsset;
             transform.position = new_pos;
         }
     }
