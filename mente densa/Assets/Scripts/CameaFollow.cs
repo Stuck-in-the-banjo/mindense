@@ -10,24 +10,13 @@ public class CameaFollow : MonoBehaviour
 
     public float smooth_speed;
 
-    public float follow_point;
-    public float un_follow_point;
-    public bool follow_y = false;
-
     private void FixedUpdate()
     {  
-        if (player.transform.position.x > follow_point && player.transform.position.x < un_follow_point)
+        if (player.transform.position.x > 1.0f && player.transform.position.x < 40.0f)
         {
             float desired_pos = player.transform.position.x;
             float smooth = Mathf.Lerp(transform.position.x, desired_pos, smooth_speed * Time.deltaTime);
-
-            Vector3 new_pos = new Vector3(smooth * speed, transform.position.y, transform.position.z);
-
-            float smooth_y = Mathf.Lerp(transform.position.y, player.transform.position.y + 2.88f, smooth_speed * Time.deltaTime);
-            if (follow_y)
-                new_pos.y = player.transform.position.y + 2.88f;
-
-            transform.position = new_pos;
+            transform.position = new Vector3(smooth * speed, transform.position.y, transform.position.z);
         }
     }
 
