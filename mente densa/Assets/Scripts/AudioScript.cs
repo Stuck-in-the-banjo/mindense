@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class AudioScript : MonoBehaviour
 {
     public GameObject teleport_no_light;
     public GameObject collider_to_delete;
     public train Train_gameobject;
+    public GameObject light;
+   
 
     Vector3 initial_pos;
 
@@ -19,10 +22,17 @@ public class AudioScript : MonoBehaviour
     bool init_pos = false;
 
     int interaction = 0;
+
+    //Post Process
+    public PostProcessVolume volume;
+    Vignette viñeteado;
+
     // Start is called before the first frame update
     void Start()
     {
         initial_pos = transform.position;
+
+        volume.profile.TryGetSettings(out viñeteado);
     }
 
     // Update is called once per frame
@@ -99,10 +109,13 @@ public class AudioScript : MonoBehaviour
        
         if (!init_pos)
         {
+            GetComponent<CameaFollow>().follow_y = true;
             transform.position = initial_pos;
             init_pos = true;
             GameObject.Destroy(collider_to_delete);
             Train_gameobject.StartMovin();
+            light.active = false;
+            viñeteado.intensity.value = 0.26f;
         }
     }
 }

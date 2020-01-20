@@ -1,40 +1,28 @@
 fileFormatVersion: 2
-guid: a361722c94f51d24388f1b9ac59ddd6f
+guid: 0ee31e9ac5a74f340ae5d1384ea85cef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2781759816194552211
-    second: tunel_de_la_bruja_0
+      213: 3231103273540403459
+    second: trenesito_0
   - first:
-      213: 7522333870701790601
-    second: tunel_de_la_bruja_1
+      213: 1309677540080874267
+    second: trenesito_1
   - first:
-      213: 859692791956246675
-    second: tunel_de_la_bruja_2
+      213: 3020045361382028806
+    second: trenesito_2
   - first:
-      213: 7123394129390184222
-    second: tunel_de_la_bruja_3
+      213: 7303037438154525556
+    second: trenesito_3
   - first:
-      213: -7741457160712604961
-    second: tunel_de_la_bruja_4
+      213: -6925924756408448158
+    second: trenesito_4
   - first:
-      213: -2753080519489252720
-    second: tunel_de_la_bruja_5
+      213: -5492177491809151823
+    second: trenesito_5
   - first:
-      213: 1027351332127625937
-    second: tunel_de_la_bruja_6
-  - first:
-      213: -5450663495299512522
-    second: tunel_de_la_bruja_7
-  - first:
-      213: -6775142341120208021
-    second: tunel_de_la_bruja_8
-  - first:
-      213: 1021859261815547295
-    second: tunel_de_la_bruja_9
-  - first:
-      213: -200941643391719345
-    second: tunel_de_la_bruja_10
+      213: -3593035361915200139
+    second: trenesito_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -67,9 +55,9 @@ TextureImporter:
     filterMode: 0
     aniso: -1
     mipBias: -100
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -155,13 +143,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tunel_de_la_bruja_0
+      name: trenesito_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 73
-        width: 29
-        height: 31
+        y: 535
+        width: 343
+        height: 107
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,62 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fae5bbc45fbb0b4abf5e84b16021124
-      internalID: 2781759816194552211
+      spriteID: 8e03c1b84923eb741abe59830bb4f0f8
+      internalID: 3231103273540403459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tunel_de_la_bruja_1
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 81
-        width: 41
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ef801dbcf5263140b178eb1da3ce311
-      internalID: 7522333870701790601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tunel_de_la_bruja_2
-      rect:
-        serializedVersion: 2
-        x: 125
-        y: 81
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0845439ebee94248b2c91269e489bd5
-      internalID: 859692791956246675
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tunel_de_la_bruja_3
+      name: trenesito_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 114
-        width: 30
-        height: 32
+        y: 428
+        width: 343
+        height: 107
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36c0157b29a3e8040867eec8db9375e3
-      internalID: 7123394129390184222
+      spriteID: 5b7b0509eb16f0d44ad80a301d439f7d
+      internalID: 1309677540080874267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tunel_de_la_bruja_5
+      name: trenesito_2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 167
-        width: 49
-        height: 9
+        x: 0
+        y: 321
+        width: 343
+        height: 107
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0934e47f649d1944ba79f4db84ff835b
-      internalID: -2753080519489252720
+      spriteID: 7dcfa40471f212c4c9f49b8fa4dd61f4
+      internalID: 3020045361382028806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tunel_de_la_bruja_6
+      name: trenesito_5
       rect:
         serializedVersion: 2
-        x: 1
-        y: 191
-        width: 48
-        height: 10
+        x: 0
+        y: 51
+        width: 343
+        height: 99
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,20 +220,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9be6c3df875b35f4bb1c0d4b3300db2e
-      internalID: 1027351332127625937
+      spriteID: 5de1914e5d5d6bb4983f2343ac32f07c
+      internalID: -5492177491809151823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tunel_de_la_bruja_4
+      name: trenesito_6
       rect:
         serializedVersion: 2
-        x: 129
-        y: 164
-        width: 25
-        height: 21
+        x: 361
+        y: 557
+        width: 86
+        height: 85
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,83 +241,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abe06119f3919f84bb2a5fc50b6b333f
-      internalID: -7741457160712604961
+      spriteID: 6db6a5b832bb2f7489309d06cae72a35
+      internalID: -3593035361915200139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tunel_de_la_bruja_7
+      name: trenesito_3
       rect:
         serializedVersion: 2
-        x: 159
-        y: 15
-        width: 82
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3edade9b6977cdc4093037c2fa19f615
-      internalID: -5450663495299512522
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tunel_de_la_bruja_8
-      rect:
-        serializedVersion: 2
-        x: 159
-        y: 28
-        width: 82
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 306ebd6357d50174798474bf503325eb
-      internalID: -6775142341120208021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tunel_de_la_bruja_9
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 137
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39bc96c6e66952a40bf64ed533fd697b
-      internalID: 1021859261815547295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tunel_de_la_bruja_10
-      rect:
-        serializedVersion: 2
-        x: 186
-        y: 84
-        width: 194
-        height: 125
+        x: 363
+        y: 65
+        width: 84
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,8 +262,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88799fc38d2fafc4694332eca8634895
-      internalID: -200941643391719345
+      spriteID: 9b1822875b126b04590e073f2d22e464
+      internalID: 7303037438154525556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trenesito_4
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 297
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7026395e8d063a47ba755dfb87cebfa
+      internalID: -6925924756408448158
       vertices: []
       indices: 
       edges: []
