@@ -1772,7 +1772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   up_desplacement: 0.3
-  speed: 1.5
+  speed: 2.5
 --- !u!212 &560693168
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1810,7 +1810,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f8b384372e1133a489b2a626b62436e9, type: 3}
   m_Color: {r: 0.1764706, g: 0.5803922, b: 0.49019608, a: 1}
   m_FlipX: 0
@@ -4488,7 +4488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   up_desplacement: 0.3
-  speed: 1.5
+  speed: 2.5
 --- !u!1 &1844757499
 GameObject:
   m_ObjectHideFlags: 0
