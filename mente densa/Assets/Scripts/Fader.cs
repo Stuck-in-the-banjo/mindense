@@ -20,7 +20,7 @@ public class Fader : MonoBehaviour
 
     public float time_to_load_scene = -1;
     float load_timer = 0.0f;
-    public int scene_to_load = 0;
+    public int scene_to_load;
 
     public FADE_STATE state = FADE_STATE.IDLE;
 
@@ -51,24 +51,11 @@ public class Fader : MonoBehaviour
                     timer += Time.deltaTime;
 
                 }
-                else state = FADE_STATE.LOAD;
+                
 
                 break;
 
-            case FADE_STATE.LOAD:
-
-                if (time_to_load_scene > 0.0f)
-                {
-                    if (load_timer < time_to_load_scene)
-                        load_timer += Time.deltaTime;
-                    else LoadScene();
-                }
-                else state = FADE_STATE.IDLE;
-
-                break;
-
-            case FADE_STATE.IDLE:
-                break;
+            
         }
 
 
