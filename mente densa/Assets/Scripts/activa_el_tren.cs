@@ -5,6 +5,7 @@ using UnityEngine;
 public class activa_el_tren : MonoBehaviour
 {
     public train train_game_object;
+    public GameObject mask;
 
     // Start is called before the first frame update
     void Start()
@@ -21,5 +22,6 @@ public class activa_el_tren : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         train_game_object.StartMovin();
+        mask.active = false;
     }
 }
