@@ -10,7 +10,10 @@ public class UnFade : MonoBehaviour
     float start_timer = 0.0f;
     public float time_to_start_fade;
 
+    public bool start_fade = true;
+
     SpriteRenderer sr;
+    public bool unfade = true;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +24,8 @@ public class UnFade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!start_fade)
+            return;
 
         if (start_timer > time_to_start_fade)
         {
@@ -30,9 +35,10 @@ public class UnFade : MonoBehaviour
 
                 float x = timer / time_to_fade;
 
-             
+             if(unfade)
                 tmp.a = Mathf.Lerp(0.0f, 1.0f, x);
-                
+             else tmp.a = Mathf.Lerp(1.0f, 0.0f, x);
+
 
                 sr.color = tmp;
                 timer += Time.deltaTime;
@@ -41,5 +47,10 @@ public class UnFade : MonoBehaviour
         }
 
         start_timer += Time.deltaTime;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        start_fade = true;
     }
 }
