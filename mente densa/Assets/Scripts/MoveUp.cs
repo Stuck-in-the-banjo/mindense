@@ -14,6 +14,8 @@ public class MoveUp : MonoBehaviour
 
     float timer = 0.0f;
 
+    public GameObject frase;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,8 @@ public class MoveUp : MonoBehaviour
     {
         start_moving = true;
         collision.gameObject.GetComponent<PlayerMove>().patatero = false;
+
+        frase.active = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
