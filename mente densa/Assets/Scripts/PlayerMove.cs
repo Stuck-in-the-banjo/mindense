@@ -31,6 +31,9 @@ public class PlayerMove : MonoBehaviour
     bool boolaso = false;
     SpriteRenderer sr;
 
+    public bool marronero = false;
+    bool giga_marronero = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -122,17 +125,39 @@ public class PlayerMove : MonoBehaviour
     {
         can_jump = false;
     }
+
     void ThrowRock()
     {
+
+       
+
         if(Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
-            GameObject new_rock = Instantiate(rock, transform.position, Quaternion.identity);
-            new_rock.GetComponent<RockMovement>().AddInitialImpulse(throw_impulse);
-            throw_impulse += 8;
-            throwed++;
+           
 
-            boolaso = true;
-            anim.SetBool("Throw", true);
+            if (marronero)
+            {
+                if(giga_marronero)
+                {
+                    GameObject new_rock = Instantiate(rock, transform.position, Quaternion.identity);
+                    new_rock.GetComponent<RockMovement>().AddInitialImpulse(20.0f);
+                    giga_marronero = false;
+                    boolaso = true;
+                    anim.SetBool("Throw", true);
+                }
+                
+            }
+            else
+            {
+                GameObject new_rock = Instantiate(rock, transform.position, Quaternion.identity);
+                new_rock.GetComponent<RockMovement>().AddInitialImpulse(throw_impulse);
+                throw_impulse += 8;
+                throwed++;
+                boolaso = true;
+                anim.SetBool("Throw", true);
+
+            }
+            
         }
 
        
