@@ -6,6 +6,7 @@ public class activa_el_tren : MonoBehaviour
 {
     public train train_game_object;
     public GameObject mask;
+    public PlayerMove player;
 
     // Start is called before the first frame update
     void Start()
@@ -23,5 +24,6 @@ public class activa_el_tren : MonoBehaviour
     {
         train_game_object.StartMovin();
         mask.active = false;
+        player.start_mareo = true;
     }
 }

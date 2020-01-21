@@ -34,6 +34,10 @@ public class PlayerMove : MonoBehaviour
     public bool marronero = false;
     bool giga_marronero = true;
 
+    bool changed_dir = false;
+    float change_direction_timer = 0.0f;
+    public bool start_mareo = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +55,16 @@ public class PlayerMove : MonoBehaviour
             HandleJump();
 
            
+        }
+
+        if(start_mareo)
+        {
+            if (change_direction_timer >= 2.5f)
+            {
+                changed_dir = !changed_dir;
+                change_direction_timer = 0.0f;
+            }
+            else change_direction_timer += Time.deltaTime;
         }
 
         HandleJumpAnimations();
@@ -72,6 +86,9 @@ public class PlayerMove : MonoBehaviour
     void HandleAxis()
     {       
         float axis = Input.GetAxisRaw("Horizontal");
+
+        if (changed_dir)
+            axis *= -1;
 
         HandleRunAnimation(axis);
 
