@@ -131,7 +131,7 @@ public class PlayerMove : MonoBehaviour
 
        
 
-        if(Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button1))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
            
 
