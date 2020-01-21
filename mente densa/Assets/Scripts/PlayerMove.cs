@@ -38,6 +38,10 @@ public class PlayerMove : MonoBehaviour
     float change_direction_timer = 0.0f;
     public bool start_mareo = false;
 
+    //audio
+    AudioSource footsteps;
+    bool already_playec = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +49,7 @@ public class PlayerMove : MonoBehaviour
 
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        footsteps = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -186,26 +191,44 @@ public class PlayerMove : MonoBehaviour
             anim.SetBool("fallin", false);
 
         if (rb.velocity.y > 0.0f)
+        {
             anim.SetBool("jumpin", true);
+            footsteps.Pause();
+        }
 
         if (rb.velocity.y < 0.0f)
         {
             anim.SetBool("jumpin", false);
             anim.SetBool("fallin", true);
+            footsteps.Pause();
         }
 
         if(!patatero)
         {
             anim.SetBool("jumpin", false);
             anim.SetBool("fallin", false);
+
         }
     }
 
     void HandleRunAnimation(float value)
     {
         if (value != 0.0f)
+        {
+            if (!already_playec)
+            {
+                footsteps.Play();
+                already_playec = true;
+            }
+            else footsteps.UnPause();
+
             anim.SetBool("movin", true);
-        else anim.SetBool("movin", false);
+        }
+        else
+        {
+            footsteps.Pause();
+            anim.SetBool("movin", false);
+        }
 
         if (value > 0.0f)
             sr.flipX = false;
