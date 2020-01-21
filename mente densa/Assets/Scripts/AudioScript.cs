@@ -27,12 +27,22 @@ public class AudioScript : MonoBehaviour
     public PostProcessVolume volume;
     Vignette viñeteado;
 
+    //Audio
+    AudioSource light_audio;
+    float audio_timer = 0.0f;
+    bool audioaso = true;
+    int audio_state = 0;
+    public AudioSource footsteps;
+    public AudioSource puerta;
+    public AudioSource interruptor;
+
     // Start is called before the first frame update
     void Start()
     {
         initial_pos = transform.position;
 
         volume.profile.TryGetSettings(out viñeteado);
+        light_audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -56,9 +66,16 @@ public class AudioScript : MonoBehaviour
         Debug.Log("Doin 2 fliker");
         if (mini_timer > 0.05f)
         {
-            if(lol)
+            if (lol)
+            {
                 transform.position = initial_pos;
-            else transform.position = teleport_no_light.transform.position;
+                light_audio.UnPause();
+            }
+            else
+            {
+                transform.position = teleport_no_light.transform.position;
+                light_audio.Pause();
+            }
 
             lol = !lol;
             mini_timer = 0.0f;
@@ -80,8 +97,15 @@ public class AudioScript : MonoBehaviour
         if (mini_timer > 1.5f)
         {
             if (!lol)
+            {
                 transform.position = initial_pos;
-            else transform.position = teleport_no_light.transform.position;
+                light_audio.UnPause();
+            }
+            else
+            {
+                transform.position = teleport_no_light.transform.position;
+                light_audio.Pause();
+            }
 
             lol = !lol;
             mini_timer = 0.0f;
@@ -101,7 +125,52 @@ public class AudioScript : MonoBehaviour
 
     void DoAudios()
     {
-        interaction = 3;
+        if(audio_state == 0)
+        {
+            if (audioaso)
+            {
+                light_audio.Pause();
+                puerta.Play();
+                audioaso = false;
+            }
+
+            if (audio_timer >= puerta.clip.length)
+            {
+                footsteps.Play();
+                audio_state++;
+                audio_timer = 0.0f;
+            }
+        }
+
+        if(audio_state == 1)
+        {
+            if (audio_timer >= 7.0f)
+            {
+                footsteps.Pause();
+                interruptor.Play();
+                audio_timer = 0.0f;
+                audio_state++;
+            }
+            else
+            {
+                float y = (1 / 7.0f) * audio_timer;
+                float x = -((y * 2) - 1);
+
+                Debug.Log(y);
+
+                footsteps.panStereo = x;
+            }
+        }
+        
+        if(audio_state == 2)
+        {
+            if(audio_timer >= interruptor.clip.length)
+                interaction = 3;
+        }
+        
+
+        audio_timer += Time.deltaTime;
+        //interaction = 3;
     }
 
     void DoTrain()
