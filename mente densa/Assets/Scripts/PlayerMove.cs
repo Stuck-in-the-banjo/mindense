@@ -79,6 +79,9 @@ public class PlayerMove : MonoBehaviour
 
         if (enable_action && throwed < 3)
             ThrowRock();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
     }
 
     private void FixedUpdate()
