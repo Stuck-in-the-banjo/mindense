@@ -20,6 +20,8 @@ public class train : MonoBehaviour
 
     public bool is_deadly = false;
 
+    bool once = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,12 @@ public class train : MonoBehaviour
     public void StartMovin()
     {
         enable_moving = true;
+        GetComponent<AudioSource>().Play();
+    }
+
+    public void StartAudio()
+    {
+        
     }
 
     void Move()
@@ -51,6 +59,12 @@ public class train : MonoBehaviour
         Mathf.Clamp(current_speed, 0.0f, max_speed);
 
         transform.Translate( current_speed * Time.deltaTime, 0.0f, 0.0f);
+
+        if (once)
+        {
+            GetComponent<AudioSource>().Play();
+            once = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -61,9 +75,9 @@ public class train : MonoBehaviour
             player.transform.position = player_initial_pos;
             transform.position = train_initial_pos;
             camera.transform.position = camera_initial_pos;
-
+            once = true;
             camera.GetComponent<CameaFollow>().new_pos = camera_initial_pos;
-
+            GetComponent<AudioSource>().Pause();
             current_speed = 0.0f;
         }
     }
