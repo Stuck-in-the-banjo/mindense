@@ -21,6 +21,7 @@ public class teleport : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("col");
+        collision.gameObject.GetComponent<Collider2D>().isTrigger = false;
         collision.gameObject.transform.position = teleport_pos.position;
     }
 }

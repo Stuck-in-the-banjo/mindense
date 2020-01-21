@@ -15,6 +15,11 @@ public class UnFade : MonoBehaviour
     SpriteRenderer sr;
     public bool unfade = true;
 
+    public bool restart = false;
+    int tmp = 0;
+
+    public float time_to_restart;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,19 +36,20 @@ public class UnFade : MonoBehaviour
         {
             if (timer < time_to_fade)
             {
-                Color tmp = sr.color;
+                DoFade();
 
-                float x = timer / time_to_fade;
-
-             if(unfade)
-                tmp.a = Mathf.Lerp(0.0f, 1.0f, x);
-             else tmp.a = Mathf.Lerp(1.0f, 0.0f, x);
-
-
-                sr.color = tmp;
-                timer += Time.deltaTime;
             }
-            else timer += Time.deltaTime;
+            else
+            {
+                if (restart && tmp == 0)
+                {
+                    timer = 0;
+                    start_timer = 0.0f;
+                    time_to_start_fade = time_to_restart;
+                    unfade = !unfade;
+                    tmp++;
+                }
+            }
         }
 
         start_timer += Time.deltaTime;
@@ -52,5 +58,20 @@ public class UnFade : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         start_fade = true;
+    }
+
+    void DoFade()
+    {
+        Color tmp = sr.color;
+
+        float x = timer / time_to_fade;
+
+        if (unfade)
+            tmp.a = Mathf.Lerp(0.0f, 1.0f, x);
+        else tmp.a = Mathf.Lerp(1.0f, 0.0f, x);
+
+
+        sr.color = tmp;
+        timer += Time.deltaTime;
     }
 }
