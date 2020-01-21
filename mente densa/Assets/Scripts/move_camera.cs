@@ -25,5 +25,7 @@ public class move_camera : MonoBehaviour
         player.enable_jump = false;
         player.enable_move = false;
         camera_follow_script.y_offsset = 3.0f;
+        camera_follow_script.gameObject.GetComponent<AudioSource>().Stop();
+        GetComponent<AudioSource>().Play();
     }
 }
