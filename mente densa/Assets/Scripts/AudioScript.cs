@@ -183,6 +183,8 @@ public class AudioScript : MonoBehaviour
             init_pos = true;
             GameObject.Destroy(collider_to_delete);
             Train_gameobject.StartMovin();
+            Train_gameobject.StartAudio();
+
             light.active = false;
             viñeteado.intensity.value = 0.26f;
         }

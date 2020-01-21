@@ -23,6 +23,7 @@ public class activa_el_tren : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         train_game_object.StartMovin();
+        train_game_object.StartAudio();
         mask.active = false;
         player.start_mareo = true;
     }
